@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0099F7;
+    font-family: 'Playfair Display', serif;
+    overflow: hidden;
+}
+.login {
+    position: absolute;
+    background: linear-gradient(to right, #F11712, #0099F7);
+     top: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 11;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.login-button {
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+}
+.login-button:hover{
+    background-color: #fff;
+    color: black;
+}
+.popup-form {
+    z-index: 111;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    display: none;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.p-container {
+    height: 90%;
+    width: 95%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    /* text-align: center; */
+}
+.p-content h3, .p-content p, .p-content h1, .l1{
+    text-align: center;
+}
+.p-content h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.p-content p{
+    margin-bottom: 10px;
+}
+
+.p-content {
+    margin-top: 100px;
+    width: 35%;
+    margin: 8% auto;
+}
+.sh {
+    font-size: 13px;
+    color: rgba(0,0,0,0.7);
+    font-weight: 600;
+}
+
+.level {
+    padding: 5px 10px;
+    display: inline;
+    background-color:#fff;
+    color: #000;
+    border-radius: 20px;
+    border:1px solid #ccc;
+    margin: 9px;
+    font-size: 10px;
+}
+div#step-1 .l1 p:first-child {
+    background-color:#4a4667;
+    color: #fff;
+}
+div#step-2 .l1 p {
+    background-color:#4a4667;
+    color: #fff;
+}
+div#step-3 .l1 .level {
+    background-color:#4a4667;
+    color: #fff;
+}
+
+i.fa.fa-check.level {
+    font-size: 10px;
+    padding: 6px;
+}
+.f1 {
+    text-align: left;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.popup-select {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 20px 0px;
+    outline: none;
+    background-color: #e0dddd;
+    border-radius: 3px;
+}
+
+.txta {
+    margin: 20px 0px;
+    width: 100%;
+    outline: none;
+    padding: 10px 20px;
+    background-color: #e0dddd;
+    border-radius: 3px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    display: block;
+    border: 1px solid rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+}
+.message {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.close1 {
+    position: absolute;
+    top: 35px;
+    left: 92%;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.close2 {
+    position: absolute;
+    top: 35px;
+    left: 92%;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.close3 {
+    position: absolute;
+    top: 35px;
+    left: 92%;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+/* PAGE-2 */
+#step-2{display: none;}
+.page2{
+    position: relative;
+}
+
+.page2-lb {
+    margin-left: 14px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.page2-lb.a {
+    margin-left: 145px;
+}
+.page2-int {
+    padding: 10px;
+    font-size: 10px;
+    width: 45%;
+    float: left;
+    margin: 5px 10px;
+    outline: none;
+    background-color: #e0dddd;
+    border: none;
+    border-radius: 5px;
+}
+.page2-inte {
+    padding: 10px;
+    width: 95%;
+    margin: 5px 10px;
+    font-size: 10px;
+    outline: none;
+    background-color: #e0dddd;
+    border: none;
+    border-radius: 5px;
+}
+.page2-cb{
+    margin: 10px;
+    margin-bottom: 0px;
+}
+.page2-c {
+    display: flex;
+    font-size: 10px;
+    margin-top: 5px;
+}
+.page2-p {
+    text-align: left !important;
+    padding-top: 10px;
+}
+.bt {
+    position: absolute;
+    top: 81%;
+    left: 34%;
+    border: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+/* PAGE-3 */
+#step-3{display: none;}
+
+/* .l1 .level {
+    background-color: black;
+    color: white;
+} */
+
+i.fa.fa-check.l2 {
+    padding: 40px;
+    background-color: #4a4667;
+    color: white;
+    border-radius: 50px;
+}
+.page3-c {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+}
