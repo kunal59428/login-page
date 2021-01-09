@@ -5,13 +5,12 @@
 }
 
 body{
-    background: #0099F7;
+    background: #daedf9;
     font-family: 'Playfair Display', serif;
     overflow: hidden;
 }
 .login {
     position: absolute;
-    background: linear-gradient(to right, #F11712, #0099F7);
      top: 0px;
     bottom: 0px;
     left: 0px;
@@ -260,3 +259,54 @@ i.fa.fa-check.l2 {
     justify-content: center;
     margin: 30px 0px;
 }
+
+
+/*css media queries*/
+@media screen and (max-width:767px){
+    .p-content{
+        width: 90%;
+    }
+    .p-content h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .sh{
+        font-size: 10px;
+    }
+    .popup-select{
+        margin: 15px 0px;
+    }
+    .close1{
+        top: 10px;
+        left: 84%;
+    }
+    .close2{
+        top: 10px;
+        left: 84%;
+    }
+    .close3{
+        top: 10px;
+        left: 84%;
+    }
+
+    .page2-lb.a {
+        margin-left: 85px;
+    }
+    .page2-int {
+        width: 43%;
+    }
+
+    .page2-inte{
+        width: 93%;
+    }
+    .page2-p{
+        font-size: 9px;
+        margin-bottom: 30px !important;
+    }
+    .message{
+        margin-top: 5px;
+    }
+    .bt{
+        top: 81%;
+        left: 11%;
+    }
