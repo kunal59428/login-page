@@ -238,6 +238,7 @@ i.fa.fa-check.level {
     font-weight: bold;
     outline: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 /* PAGE-3 */
@@ -278,22 +279,26 @@ i.fa.fa-check.l2 {
     }
     .close1{
         top: 10px;
-        left: 84%;
+        left: 82%;
     }
     .close2{
         top: 10px;
-        left: 84%;
+        left: 82%;
     }
     .close3{
         top: 10px;
-        left: 84%;
+        left: 82%;
+    }
+
+    .page2 {
+        margin-top: 20px;
     }
 
     .page2-lb.a {
         margin-left: 85px;
     }
     .page2-int {
-        width: 43%;
+        width: 42%;
     }
 
     .page2-inte{
@@ -307,7 +312,10 @@ i.fa.fa-check.l2 {
         margin-top: 5px;
     }
     .bt{
-        top: 81%;
+        top: 75%;
         left: 11%;
+    }
+    .p2{
+        margin-left: 40px;
     }
 }
