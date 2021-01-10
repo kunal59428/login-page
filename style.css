@@ -145,12 +145,12 @@ i.fa.fa-check.level {
 }
 .message {
     display: flex;
-    margin-top: 15px;
-    margin-left: 70px;
+    margin-left: 62px;
 }
 
 .message.p2 {
     margin-left: 30px !important;
+    margin-top: 15px;
 }
 
 .close1 {
