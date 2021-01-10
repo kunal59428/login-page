@@ -139,15 +139,18 @@ i.fa.fa-check.level {
     text-align: center;
     display: block;
     border: 1px solid rgba(0,0,0,0.1);
-    text-decoration: none;
-    color: black;
     font-size: 14px;
     cursor: pointer;
+    margin-left: 17%;
 }
 .message {
     display: flex;
-    justify-content: center;
-    margin-top: 6px;
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.message.p2 {
+    margin-left: 30px !important;
 }
 
 .close1 {
@@ -230,9 +233,6 @@ i.fa.fa-check.level {
     padding-top: 10px;
 }
 .bt {
-    position: absolute;
-    top: 81%;
-    left: 34%;
     border: none;
     color: black;
     font-size: 12px;
@@ -240,7 +240,6 @@ i.fa.fa-check.level {
     outline: none;
     cursor: pointer;
     background-color: transparent;
-    margin-top: 15px;
 }
 
 /* PAGE-3 */
