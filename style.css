@@ -275,6 +275,12 @@ i.fa.fa-check.l2 {
     .sh{
         font-size: 10px;
     }
+    .l1{
+        margin-bottom: 20px;
+    }
+    .btn{
+        margin-left: 11%;
+    }
     .popup-select{
         margin: 15px 0px;
     }
@@ -311,6 +317,10 @@ i.fa.fa-check.l2 {
     }
     .message{
         margin-top: 5px;
+        margin-left: 16px;
+    }
+    .message.p2 {
+        margin-left: 20px !important;
     }
     .bt{
         top: 75%;
