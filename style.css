@@ -141,7 +141,7 @@ i.fa.fa-check.level {
     border: 1px solid rgba(0,0,0,0.1);
     font-size: 14px;
     cursor: pointer;
-    margin-left: 17%;
+    margin-left: 19%;
 }
 .message {
     display: flex;
@@ -150,7 +150,7 @@ i.fa.fa-check.level {
 
 .message.p2 {
     margin-left: 30px !important;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .close1 {
@@ -195,19 +195,15 @@ i.fa.fa-check.level {
     font-size: 12px;
     font-weight: 600;
 }
-.page2-lb.a {
-    margin-left: 145px;
-}
 .page2-int {
     padding: 10px;
     font-size: 10px;
-    width: 45%;
-    float: left;
     margin: 5px 10px;
     outline: none;
     background-color: #e0dddd;
     border: none;
     border-radius: 5px;
+    width: 90%;
 }
 .page2-inte {
     padding: 10px;
@@ -218,6 +214,10 @@ i.fa.fa-check.level {
     background-color: #e0dddd;
     border: none;
     border-radius: 5px;
+}
+.page2-fl {
+    width: 50%;
+    float: left;
 }
 .page2-cb{
     margin: 10px;
