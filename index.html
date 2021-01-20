@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="login">
-       <button class="login-button" id="log-btn">login</button>
+       <button class="login-button" id="log-btn" value="reload">login</button>
     </div>
     <div class="popup-form">
         <h3 class="close1">CLOSE</h3>
@@ -32,9 +32,9 @@
                         <option>Job enquiry</option>
                         <option>Family enquiry</option>
                     </select><br>
-                    <label>Your Massage</label><br>
+                    <label>Your Message</label><br>
                     <textarea id="txt" class="txta" cols="30" rows="10" placeholder="Start typing......" required></textarea>
-                    <div class="message"><button onclick="return validate()" type="button" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
+                    <div class="message"><button onclick="return validate()" type="submit" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
                 </div>
             </div>
             
@@ -92,7 +92,10 @@
         // CLOSE
         document.querySelector(".close1").addEventListener("click", function(){
             document.querySelector(".popup-form").style.display = "none";
+            var textarea = document.getElementById("txt");
+            textarea.value=""
         });
+
         
         // popup
         document.getElementById("log-btn").addEventListener("click", function(){
@@ -150,6 +153,7 @@
             document.querySelector(".step1").style.display = "none";
         });
             }
+            return false;
         }
         document.querySelector(".bt").addEventListener("click", function(){
             document.querySelector(".step2").style.display = "none";

@@ -260,7 +260,7 @@ i.fa.fa-check.l2 {
         margin-bottom: 20px;
     }
     .btn{
-        margin-left: 11%;
+        margin-left: 27%;
     }
     .popup-select{
         margin: 15px 0px;
@@ -269,24 +269,11 @@ i.fa.fa-check.l2 {
         top: 10px;
         left: 82%;
     }
-    .close2{
-        top: 10px;
-        left: 82%;
-    }
-    .close3{
-        top: 10px;
-        left: 82%;
-    }
-
     .page2 {
         margin-top: 20px;
     }
-
-    .page2-lb.a {
-        margin-left: 85px;
-    }
     .page2-int {
-        width: 42%;
+        width: 90%;
     }
 
     .page2-inte{
