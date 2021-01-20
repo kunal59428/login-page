@@ -13,9 +13,9 @@
        <button class="login-button" id="log-btn">login</button>
     </div>
     <div class="popup-form">
+        <h3 class="close1">CLOSE</h3>
         <form class="f1">
-            <div class="p-container step1" id="step-1">
-                <h3 class="close1">CLOSE</h3>
+            <div class="p-container step1" id="step-1" >
                 <div class="p-content">
                     <h1>Get in touch</h1>
                     <p class="sh">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
@@ -25,7 +25,7 @@
                         <i class="fa fa-check level"></i>
                     </div>
                     <label>Enquiry type</label><br>
-                    <select class="popup-select">
+                    <select class="popup-select" id="select" required>
                         <option>Select enquiry type</option>
                         <option>General enquiry</option>
                         <option>Personal enquiry</option>
@@ -33,13 +33,13 @@
                         <option>Family enquiry</option>
                     </select><br>
                     <label>Your Massage</label><br>
-                    <textarea class="txta" cols="30" rows="10" placeholder="Start typing......" required></textarea>
-                    <div class="message"><button type="button" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
+                    <textarea id="txt" class="txta" cols="30" rows="10" placeholder="Start typing......" required></textarea>
+                    <div class="message"><button onclick="return validate()" type="submit" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
                 </div>
             </div>
+            
             <div class="p-container step2" id="step-2">
                 <div class="p-content">
-                    <h3 class="close2">CLOSE</h3>
                     <h1>Get in touch</h1>
                     <p class="sh">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
                     <div class="l1">
@@ -49,32 +49,31 @@
                     </div>
                     <div class="page2">
                         <div class="page2-fl">
-                            <label class="page2-lb">First name</label>
-                            <input class="page2-int"  type="text">
+                            <label class="page2-lb" >First name</label>
+                            <input class="page2-int"  type="text" id="first" required>
                         </div>
                         <div class="page2-fl">
                             <label class="page2-lb a">Last name</label>
-                            <input class="page2-int"  type="text"><br>
+                            <input class="page2-int"  type="text" id="last" required><br>
                         </div>
                         <label class="page2-lb">Email</label><br>
-                        <input class="page2-inte"  type="email" placeholder="e.g-name@domain.com">
+                        <input class="page2-inte"  type="email" placeholder="e.g-name@domain.com" id="email" required>
                         <label class="page2-lb">Telephone</label><br>
-                        <input class="page2-inte"  type="number" placeholder="e.g-0123456789">
+                        <input class="page2-inte"  type="number" placeholder="e.g-0123456789" id="mobile" required>
                         <div class="page2-c">
-                            <input class="page2-cb" type="checkbox">
+                            <input class="page2-cb" type="checkbox" id="checkbox">
                             <label class="page2-p">I confirm that on submitting this form I am consenting to company storing and using the information
                             detailed above. Information on this can be found on in our privacy policy.</label>
                         </div>
                     </div>
                     
                     <div class="message p2"> 
-                        <button type="button" class="bt"><i class="fa fa-angle-left"></i>&nbsp; BACK</button>
-                        <button type="button" class="btn" id="page-3">SEND MESSAGE</button></div>
+                        <button type="submit" class="bt"><i class="fa fa-angle-left"></i>&nbsp; BACK</button>
+                        <button onclick="return validate()" type="submit" class="btn" id="page-3">SEND MESSAGE</button></div>
                 </div>
             </div>
             <div class="p-container step3" id="step-3">
                 <div class="p-content">
-                    <h3 class="close3">CLOSE</h3>
                     <h1>Get in touch</h1>
                     <p class="sh">Please provide your contact details so we can get back to you</p>
                     <div class="l1">
@@ -95,16 +94,6 @@
             document.querySelector(".popup-form").style.display = "none";
         });
         
-        // CLOSE
-        document.querySelector(".close2").addEventListener("click", function(){
-            document.querySelector(".popup-form").style.display = "none";
-        });
-
-        // CLOSE
-        document.querySelector(".close3").addEventListener("click", function(){
-            document.querySelector(".popup-form").style.display = "none";
-        });
-
         // popup
         document.getElementById("log-btn").addEventListener("click", function(){
             document.querySelector(".popup-form").style.display = "flex";
@@ -113,10 +102,21 @@
             document.querySelector(".step3").style.display = "none";
             
         });
-        document.getElementById("page-2").addEventListener("click", function(){
+        
+        function validate(){
+            var select = document.getElementById("select");
+            var textarea = document.getElementById("txt");
+            if (select.value == "Select enquiry type" || textarea.value == ""){
+                alert("field is empty");
+            }
+            else{
+                document.getElementById("page-2").addEventListener("click", function(){
             document.querySelector(".step2").style.display = "flex";
             document.querySelector(".step1").style.display = "none";
         });
+            }
+            return false;
+        }
 
         document.getElementById("page-3").addEventListener("click", function(){
             document.querySelector(".step3").style.display = "flex";
