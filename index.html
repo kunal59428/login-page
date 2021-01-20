@@ -34,7 +34,7 @@
                     </select><br>
                     <label>Your Massage</label><br>
                     <textarea id="txt" class="txta" cols="30" rows="10" placeholder="Start typing......" required></textarea>
-                    <div class="message"><button onclick="return validate()" type="submit" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
+                    <div class="message"><button onclick="return validate()" type="button" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
                 </div>
             </div>
             
@@ -69,7 +69,7 @@
                     
                     <div class="message p2"> 
                         <button type="submit" class="bt"><i class="fa fa-angle-left"></i>&nbsp; BACK</button>
-                        <button onclick="return validate()" type="submit" class="btn" id="page-3">SEND MESSAGE</button></div>
+                        <button onclick="return validates()" type="submit" class="btn" id="page-3">SEND MESSAGE</button></div>
                 </div>
             </div>
             <div class="p-container step3" id="step-3">
@@ -117,14 +117,40 @@
             }
             return false;
         }
-
-        document.getElementById("page-3").addEventListener("click", function(){
+        function validates(){
+            var input = document.getElementById("first");
+            var lastinput = document.getElementById("last");
+            var email = document.getElementById("email");
+            var mobile = document.getElementById("mobile");
+            var check = document.getElementById("checkbox");
+            if (input.value.length <= 0){
+                input.focus();
+                alert("first-name is empty");
+                return false;
+            }
+            if (lastinput.value.length <= 0){
+                input.focus();
+                alert("last-name is empty");
+                return false;
+            }
+            if(email.value.length <= 0){
+                email.focus();
+                alert("Email is empty");
+                return false;
+            }
+            if(mobile.value.length <= 0){
+                mobile.focus();
+                alert("mobile number is empty");
+                return false;
+            }
+            else{
+                document.getElementById("page-3").addEventListener("click", function(){
             document.querySelector(".step3").style.display = "flex";
             document.querySelector(".step2").style.display = "none";
             document.querySelector(".step1").style.display = "none";
         });
-
-        // BACK
+            }
+        }
         document.querySelector(".bt").addEventListener("click", function(){
             document.querySelector(".step2").style.display = "none";
             document.querySelector(".step1").style.display = "flex";
