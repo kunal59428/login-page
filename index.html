@@ -94,6 +94,16 @@
             document.querySelector(".popup-form").style.display = "none";
             var textarea = document.getElementById("txt");
             textarea.value=""
+            var select = document.getElementById("select");
+            select.value="Select enquiry type"
+            var input = document.getElementById("first");
+            input.value=""
+            var lastinput = document.getElementById("last");
+            lastinput.value=""
+            var email = document.getElementById("email");
+            email.value=""
+            var mobile = document.getElementById("mobile");
+            mobile.value=""
         });
 
         
@@ -125,7 +135,6 @@
             var lastinput = document.getElementById("last");
             var email = document.getElementById("email");
             var mobile = document.getElementById("mobile");
-            var check = document.getElementById("checkbox");
             if (input.value.length <= 0){
                 input.focus();
                 alert("first-name is empty");
