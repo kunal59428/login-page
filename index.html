@@ -121,6 +121,7 @@
             var textarea = document.getElementById("txt");
             if (select.value == "Select enquiry type" || textarea.value == ""){
                 alert("field is empty");
+                return false;
             }
             else{
                 document.getElementById("page-2").addEventListener("click", function(){
