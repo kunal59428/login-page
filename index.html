@@ -13,7 +13,7 @@
        <button class="login-button" id="log-btn" value="reload">login</button>
     </div>
     <div class="popup-form">
-        <h3 class="close1">CLOSE</h3>
+        <h3 class="close">CLOSE</h3>
         <form class="f1">
             <div class="p-container step1" id="step-1" >
                 <div class="p-content">
@@ -90,7 +90,7 @@
     </div>
     <script>
         // CLOSE
-        document.querySelector(".close1").addEventListener("click", function(){
+        document.querySelector(".close").addEventListener("click", function(){
             document.querySelector(".popup-form").style.display = "none";
             var textarea = document.getElementById("txt");
             textarea.value=""
