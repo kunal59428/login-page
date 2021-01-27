@@ -47,6 +47,48 @@ body{
     justify-content: center;
     /* align-items: center; */
 }
+#slt{
+    display: none;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#sl{
+    display: none;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#fn{
+    display: none;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#ln{
+    display: none;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#em{
+    display: none;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+#mob{
+    display: none;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
 
 .p-container {
     height: 90%;
@@ -117,7 +159,7 @@ i.fa.fa-check.level {
 .popup-select {
     width: 100%;
     padding: 8px 10px;
-    margin: 20px 0px;
+    margin: 7px 0px;
     outline: none;
     background-color: #e0dddd;
     border-radius: 3px;

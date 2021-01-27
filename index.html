@@ -14,7 +14,7 @@
     </div>
     <div class="popup-form">
         <h3 class="close">CLOSE</h3>
-        <form class="f1">
+        <form class="f1" name="form">
             <div class="p-container step1" id="step-1" >
                 <div class="p-content">
                     <h1>Get in touch</h1>
@@ -25,15 +25,16 @@
                         <i class="fa fa-check level"></i>
                     </div>
                     <label>Enquiry type</label><br>
-                    <select class="popup-select" id="select" required>
+                    <select class="popup-select" id="select"required>
                         <option>Select enquiry type</option>
                         <option>General enquiry</option>
                         <option>Personal enquiry</option>
                         <option>Job enquiry</option>
                         <option>Family enquiry</option>
-                    </select><br>
+                    </select><span id="slt">*field is empty</span><br>
                     <label>Your Message</label><br>
-                    <textarea id="txt" class="txta" cols="30" rows="10" placeholder="Start typing......" required></textarea>
+                    <textarea id="txt"class="txta" cols="30" rows="10" placeholder="Start typing......" required></textarea>
+                    <span id="sl">*field is empty</span>
                     <div class="message"><button onclick="return validate()" type="submit" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
                 </div>
             </div>
@@ -51,15 +52,21 @@
                         <div class="page2-fl">
                             <label class="page2-lb" >First name</label>
                             <input class="page2-int"  type="text" id="first" required>
+                            <span id="fn">*field is empty</span>
                         </div>
                         <div class="page2-fl">
                             <label class="page2-lb a">Last name</label>
                             <input class="page2-int"  type="text" id="last" required><br>
+                            <span id="ln">*field is empty</span>
                         </div>
-                        <label class="page2-lb">Email</label><br>
-                        <input class="page2-inte"  type="email" placeholder="e.g-name@domain.com" id="email" required>
-                        <label class="page2-lb">Telephone</label><br>
-                        <input class="page2-inte"  type="number" placeholder="e.g-0123456789" id="mobile" required>
+                        <div class="pg">
+                            <label class="page2-lb">Email</label><br>
+                            <input class="page2-inte"  type="email" placeholder="e.g-name@domain.com" id="email" required>
+                            <span id="em">*field is empty</span>
+                            <label class="page2-lb">Telephone</label><br>
+                            <input class="page2-inte"  type="number" placeholder="e.g-0123456789" id="mobile" required>
+                            <span id="mob">*field is empty</span>
+                        </div>
                         <div class="page2-c">
                             <input class="page2-cb" type="checkbox" id="checkbox">
                             <label class="page2-p">I confirm that on submitting this form I am consenting to company storing and using the information
@@ -92,18 +99,18 @@
         // CLOSE
         document.querySelector(".close").addEventListener("click", function(){
             document.querySelector(".popup-form").style.display = "none";
-            var textarea = document.getElementById("txt");
-            textarea.value=""
-            var select = document.getElementById("select");
-            select.value="Select enquiry type"
-            var input = document.getElementById("first");
-            input.value=""
-            var lastinput = document.getElementById("last");
-            lastinput.value=""
-            var email = document.getElementById("email");
-            email.value=""
-            var mobile = document.getElementById("mobile");
-            mobile.value=""
+            // var textarea = document.getElementById("txt");
+            // textarea.value=""
+            // var select = document.getElementById("select");
+            // select.value="Select enquiry type"
+            // var input = document.getElementById("first");
+            // input.value=""
+            // var lastinput = document.getElementById("last");
+            // lastinput.value=""
+            // var email = document.getElementById("email");
+            // email.value=""
+            // var mobile = document.getElementById("mobile");
+            // mobile.value=""
         });
 
         
@@ -115,45 +122,76 @@
             document.querySelector(".step3").style.display = "none";
             
         });
+
+        
         
         function validate(){
             var select = document.getElementById("select");
             var textarea = document.getElementById("txt");
-            if (select.value == "Select enquiry type" || textarea.value == ""){
-                alert("field is empty");
+            if (select.value == "Select enquiry type"){
+                document.getElementById("slt").style.display = "flex";
+                select.focus();
+                return false;
+            }
+            if (textarea.value.length <= 0){
+                textarea.focus();
+                document.getElementById("sl").style.display = "flex";
                 return false;
             }
             else{
                 document.getElementById("page-2").addEventListener("click", function(){
-            document.querySelector(".step2").style.display = "flex";
-            document.querySelector(".step1").style.display = "none";
-        });
+                    document.querySelector(".step2").style.display = "flex";
+                    document.querySelector(".step1").style.display = "none";
+                    
+                });
             }
             return false;
         }
+        document.getElementById("select").addEventListener('click', select_error)
+        function select_error(){
+            if (select.value !== "Select enquiry type"){
+                document.getElementById("slt").style.display = "none";
+                return true;
+            };
+        }
+        txt.addEventListener('keyup', textarea_error)
+        function textarea_error(){
+            if (textarea.value.length >= 0){
+                textarea_error.focus();
+                document.getElementById("sl").style.display = "none";
+            }
+            else{
+                document.getElementById("page-2").addEventListener("click", function(){
+                    document.querySelector(".step2").style.display = "flex";
+                    document.querySelector(".step1").style.display = "none";
+                    
+                });
+            }
+            return false;
+        }
+
         function validates(){
             var input = document.getElementById("first");
             var lastinput = document.getElementById("last");
             var email = document.getElementById("email");
             var mobile = document.getElementById("mobile");
             if (input.value.length <= 0){
-                input.focus();
-                alert("first-name is empty");
+                document.getElementById("fn").style.display = "flex";
                 return false;
             }
             if (lastinput.value.length <= 0){
-                input.focus();
-                alert("last-name is empty");
+                lastinput.focus();
+                document.getElementById("ln").style.display = "flex";
                 return false;
             }
             if(email.value.length <= 0){
                 email.focus();
-                alert("Email is empty");
+                document.getElementById("em").style.display = "flex";
                 return false;
             }
             if(mobile.value.length <= 0){
                 mobile.focus();
-                alert("mobile number is empty");
+                document.getElementById("mob").style.display = "flex";
                 return false;
             }
             else{
