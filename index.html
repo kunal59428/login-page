@@ -24,18 +24,29 @@
                         <p class="level">2</p>
                         <i class="fa fa-check level"></i>
                     </div>
-                    <label>Enquiry type</label><br>
-                    <select class="popup-select" id="select"required>
-                        <option>Select enquiry type</option>
-                        <option>General enquiry</option>
-                        <option>Personal enquiry</option>
-                        <option>Job enquiry</option>
-                        <option>Family enquiry</option>
-                    </select><span id="slt">*field is empty</span><br>
-                    <label>Your Message</label><br>
-                    <textarea id="txt"class="txta" cols="30" rows="10" placeholder="Start typing......" required></textarea>
+                    <div class="s">
+                        <label for="select">Enquiry type</label><br>
+                        <select class="popup-select" id="select" >
+                            <option>Select enquiry type</option>
+                            <option>General enquiry</option>
+                            <option>Personal enquiry</option>
+                            <option>Job enquiry</option>
+                            <option>Family enquiry</option>
+                        </select>
+                        <div class="icons">
+                            <i class="icon1 fa fa-exclamation"></i>
+                            <i class="icon2 fa fa-check"></i>
+                        </div>
+                        <span id="slt">Field Is Empty</span>
+                    </div>
+                    <label for="txt">Your Message</label>
+                    <textarea id="txt" class="txta" cols="30" rows="10" placeholder="Start typing......"></textarea>
+                    <div class="icons">
+                        <i class="t-icon1 fa fa-exclamation"></i>
+                        <i class="t-icon2 fa fa-check"></i>
+                    </div>
                     <span id="sl">*field is empty</span>
-                    <div class="message"><button onclick="return validate()" type="submit" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
+                    <div class="message"><button onclick="return validate()" type="button" class="btn" id="page-2">CONFIRM MESSAGE</button></div>
                 </div>
             </div>
             
@@ -50,33 +61,54 @@
                     </div>
                     <div class="page2">
                         <div class="page2-fl">
-                            <label class="page2-lb" >First name</label>
-                            <input class="page2-int"  type="text" id="first" required>
-                            <span id="fn">*field is empty</span>
+                            <label class="page2-lb" for="first" >First name</label>
+                            <input autocomplete="off" class="page2-int"  type="text" id="first" placeholder="First name">
+                            <div class="icons1">
+                                <i class="f-icon1 fa fa-exclamation"></i>
+                                <i class="f-icon2 fa fa-check"></i>
+                            </div>
+                            <p id="fn">*Field Is Empty</p>
                         </div>
                         <div class="page2-fl">
-                            <label class="page2-lb a">Last name</label>
-                            <input class="page2-int"  type="text" id="last" required><br>
-                            <span id="ln">*field is empty</span>
-                        </div>
-                        <div class="pg">
-                            <label class="page2-lb">Email</label><br>
-                            <input class="page2-inte"  type="email" placeholder="e.g-name@domain.com" id="email" required>
-                            <span id="em">*field is empty</span>
-                            <label class="page2-lb">Telephone</label><br>
-                            <input class="page2-inte"  type="number" placeholder="e.g-0123456789" id="mobile" required>
-                            <span id="mob">*field is empty</span>
-                        </div>
-                        <div class="page2-c">
-                            <input class="page2-cb" type="checkbox" id="checkbox">
-                            <label class="page2-p">I confirm that on submitting this form I am consenting to company storing and using the information
-                            detailed above. Information on this can be found on in our privacy policy.</label>
+                            <label class="page2-lb a" for="last">Last name</label>
+                            <input autocomplete="off" class="page2-int"  type="text" id="last" placeholder="Last name">
+                            <div class="icons1">
+                                <i class="l-icon1 fa fa-exclamation"></i>
+                                <i class="l-icon2 fa fa-check"></i>
+                            </div>
+                            <span id="ln">*Field Is Empty</span>
                         </div>
                     </div>
+                        <div class="page2">
+                            <label class="page2-lb" for="email">Email</label><br>
+                            <input autocomplete="off" onkeyup="check()" class="page2-inte" type="email" placeholder="e.g-name@domain.com" id="email" required>
+                            <div class="icons2">
+                                <i class="em-icon1 fa fa-exclamation"></i>
+                                <i class="em-icon2 fa fa-check"></i>
+                            </div>
+                            <span id="em">*Field Is Empty</span>
+                            <label class="page2-lb" for="mobile">Telephone</label><br>
+                            <input autocomplete="off" class="page2-inte" type="number" placeholder="e.g-0123456789" id="mobile" required>
+                            <div class="icons2">
+                                <i class="mob-icon1 fa fa-exclamation"></i>
+                                <i class="mob-icon2 fa fa-check"></i>
+                            </div>
+                            <span id="mob">*Field Is Empty</span>
+                            <div class="page2-c">
+                                <input class="page2-cb" type="checkbox" id="checkbox">
+                                <label class="page2-p" for="checkbox">I confirm that on submitting this form I am consenting to company storing and using the information
+                                detailed above. Information on this can be found on in our privacy policy.</label><br>
+                            </div>
+                            <div class="ch">
+                                <span id="ch">*Field Is Empty</span>
+                            </div>
+                            <div class="message p2"> 
+                                <button type="submit" class="bt"><i class="fa fa-angle-left"></i>&nbsp; BACK</button>
+                                <button onclick="return validates()" type="button" class="btn" id="page-3">SEND MESSAGE</button>
+                            </div>
+                        </div>
                     
-                    <div class="message p2"> 
-                        <button type="submit" class="bt"><i class="fa fa-angle-left"></i>&nbsp; BACK</button>
-                        <button onclick="return validates()" type="submit" class="btn" id="page-3">SEND MESSAGE</button></div>
+                    
                 </div>
             </div>
             <div class="p-container step3" id="step-3">
@@ -94,123 +126,7 @@
                 </div>
             </div>
         </form>
-    </div>
-    <script>
-        // CLOSE
-        document.querySelector(".close").addEventListener("click", function(){
-            document.querySelector(".popup-form").style.display = "none";
-            // var textarea = document.getElementById("txt");
-            // textarea.value=""
-            // var select = document.getElementById("select");
-            // select.value="Select enquiry type"
-            // var input = document.getElementById("first");
-            // input.value=""
-            // var lastinput = document.getElementById("last");
-            // lastinput.value=""
-            // var email = document.getElementById("email");
-            // email.value=""
-            // var mobile = document.getElementById("mobile");
-            // mobile.value=""
-        });
-
-        
-        // popup
-        document.getElementById("log-btn").addEventListener("click", function(){
-            document.querySelector(".popup-form").style.display = "flex";
-            document.querySelector(".step1").style.display = "flex";
-            document.querySelector(".step2").style.display = "none";
-            document.querySelector(".step3").style.display = "none";
-            
-        });
-
-        
-        
-        function validate(){
-            var select = document.getElementById("select");
-            var textarea = document.getElementById("txt");
-            if (select.value == "Select enquiry type"){
-                document.getElementById("slt").style.display = "flex";
-                select.focus();
-                return false;
-            }
-            if (textarea.value.length <= 0){
-                textarea.focus();
-                document.getElementById("sl").style.display = "flex";
-                return false;
-            }
-            else{
-                document.getElementById("page-2").addEventListener("click", function(){
-                    document.querySelector(".step2").style.display = "flex";
-                    document.querySelector(".step1").style.display = "none";
-                    
-                });
-            }
-            return false;
-        }
-        document.getElementById("select").addEventListener('click', select_error)
-        function select_error(){
-            if (select.value !== "Select enquiry type"){
-                document.getElementById("slt").style.display = "none";
-                return true;
-            };
-        }
-        txt.addEventListener('keyup', textarea_error)
-        function textarea_error(){
-            if (textarea.value.length >= 0){
-                textarea_error.focus();
-                document.getElementById("sl").style.display = "none";
-            }
-            else{
-                document.getElementById("page-2").addEventListener("click", function(){
-                    document.querySelector(".step2").style.display = "flex";
-                    document.querySelector(".step1").style.display = "none";
-                    
-                });
-            }
-            return false;
-        }
-
-        function validates(){
-            var input = document.getElementById("first");
-            var lastinput = document.getElementById("last");
-            var email = document.getElementById("email");
-            var mobile = document.getElementById("mobile");
-            if (input.value.length <= 0){
-                document.getElementById("fn").style.display = "flex";
-                return false;
-            }
-            if (lastinput.value.length <= 0){
-                lastinput.focus();
-                document.getElementById("ln").style.display = "flex";
-                return false;
-            }
-            if(email.value.length <= 0){
-                email.focus();
-                document.getElementById("em").style.display = "flex";
-                return false;
-            }
-            if(mobile.value.length <= 0){
-                mobile.focus();
-                document.getElementById("mob").style.display = "flex";
-                return false;
-            }
-            else{
-                document.getElementById("page-3").addEventListener("click", function(){
-            document.querySelector(".step3").style.display = "flex";
-            document.querySelector(".step2").style.display = "none";
-            document.querySelector(".step1").style.display = "none";
-        });
-            }
-            return false;
-        }
-        document.querySelector(".bt").addEventListener("click", function(){
-            document.querySelector(".step2").style.display = "none";
-            document.querySelector(".step1").style.display = "flex";
-        });
-
-        
-    </script>
-
-    
+    </div> 
+    <script src="script.js"></script>   
 </body>
 </html>

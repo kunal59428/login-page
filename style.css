@@ -47,48 +47,164 @@ body{
     justify-content: center;
     /* align-items: center; */
 }
-#slt{
+#slt, #sl {
     display: none;
-    color: red;
+    position: relative;
+    color: #fceae8;
     font-size: 15px;
-    font-weight: 600;
-    margin-left: 10px;
+    background-color: #e74c3c;
+    justify-content: center;
+    margin: -20px 0 3px 0;
+    padding: 4px;
+    letter-spacing: 2px;
 }
-#sl{
+#slt::before, #sl::before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color:  #e74c3c;
+    right: 8px;
+    top: -7px;
+    transform: rotate(45deg);
+}
+
+#fn, #ln {
     display: none;
-    color: red;
-    font-size: 15px;
-    font-weight: 600;
-    margin-left: 10px;
+    position: relative;
+    color: #fceae8;
+    font-size: 12px;
+    background-color: #e74c3c;
+    justify-content: center;
+    margin: -20px 0 3px 0;
+    padding: 2px;
+    width: 70%;
+    letter-spacing: 2px;
+    left: 20%;
 }
-#fn{
+#fn::before, #ln::before {
+    position: absolute;
+    content: '';
+    height: 12px;
+    width: 12px;
+    background-color: #e74c3c;
+    right: 5px;
+    top: -5px;
+    transform: rotate(45deg);
+}
+#em, #mob{
     display: none;
-    color: red;
+    position: relative;
+    color: #fceae8;
     font-size: 15px;
-    font-weight: 600;
-    margin-left: 10px;
+    background-color: #e74c3c;
+    justify-content: center;
+    margin: -13px 0 0px 0;
+    padding: 4px;
+    letter-spacing: 2px;
+    width: 90%;
+    left: 6%;
 }
-#ln{
+#em::before, #mob::before {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color:  #e74c3c;
+    right: 8px;
+    top: -7px;
+    transform: rotate(45deg);
+}
+#ch{
     display: none;
-    color: red;
+    position: relative;
+    color: #fceae8;
     font-size: 15px;
-    font-weight: 600;
-    margin-left: 10px;
+    background-color: #e74c3c;
+    justify-content: center;
+    margin: -13px 0 0px 0;
+    padding: 4px;
+    letter-spacing: 2px;
+    width: 90%;
+    left: 1%;
+    top: 20px;
 }
-#em{
+#ch::before {
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color:  #e74c3c;
+    right: 95%;
+    top: -6px;
+    transform: rotate(45deg);
+}
+
+/* icons */
+
+.icons {
+    position: relative;
+    top: -36px;
+    width: 26px;
+    left: 93%;
+}
+.icons1 {
+    position: relative;
+    top: -30px;
+    width: 26px;
+    left: 78%;
+}
+.icons2 {
+    position: relative;
+    top: -29px;
+    width: 26px;
+    left: 89%;
+}
+.icon1, .t-icon1 {
+    background-color: red;
+    padding: 4px 10px;
+    font-size: 15px;
+    border-radius: 50%;
     display: none;
-    color: red;
-    font-size: 15px;
-    font-weight: 600;
-    margin-left: 10px;
 }
-#mob{
+.icon2, .t-icon2 {
+    background-color: #00ff00;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 50%;
     display: none;
-    color: red;
-    font-size: 15px;
-    font-weight: 600;
-    margin-left: 10px;
 }
+.f-icon1, .l-icon1{
+    background-color: red;
+    padding: 4px 10px;
+    font-size: 10px;
+    border-radius: 50%;
+    display: none;  
+}
+.f-icon2, .l-icon2 {
+    background-color: #00ff00;
+    padding: 4px 7px;
+    width: 90%;
+    font-size: 9px;
+    border-radius: 50%;
+    display: none;
+}
+.em-icon1, .mob-icon1{
+    background-color: red;
+    padding: 4px 10px;
+    font-size: 10px;
+    border-radius: 50%;
+    display: none;  
+}
+.em-icon2, .mob-icon2 {
+    background-color: #00ff00;
+    padding: 3px 7px;
+    width: 90%;
+    font-size: 9px;
+    border-radius: 50%;
+    display: none;
+}
+
 
 .p-container {
     height: 90%;
@@ -166,7 +282,7 @@ i.fa.fa-check.level {
 }
 
 .txta {
-    margin: 20px 0px;
+    margin: 20px 0px 5px 0px;
     width: 100%;
     outline: none;
     padding: 10px 20px;
@@ -208,9 +324,13 @@ i.fa.fa-check.level {
 
 /* PAGE-2 */
 #step-2{display: none;}
-.page2{
-    position: relative;
+.page2 {
     margin-top: 20px;
+    width: 100%;
+    float: left;
+}
+.page2:last-child {
+    margin-top: 0px;
 }
 
 .page2-lb {
