@@ -110,14 +110,14 @@ var mob_error = document.querySelector('.mob-icon1');
 var mob_error2 = document.querySelector('.mob-icon2');
 
 function validates(){
-    if (first.value.length <= 3){
+    if (first.value.trim() <= 1){
         first.style.border = "1px solid red";
         first_error.style.display = "flex";
         f_error.style.display = "flex";
         f_error2.style.display = "none";
         return false;
     }
-    if (last.value.length <= 3){
+    if (last.value.trim() <= 1){
         last.style.border = "1px solid red";
         last_error.style.display = "flex";
         l_error.style.display = "flex";
@@ -144,7 +144,8 @@ first.addEventListener('textInput', fn_hide);
 last.addEventListener('textInput', ln_hide);
 mobile.addEventListener('textInput', mob_hide);
 function fn_hide(){
-    if (first.value.length >= 3){
+    if (first.value.length >= 1){
+        first.value.trim();
         first.style.border = "1px solid silver";
         first_error.style.display = "none";
         f_error.style.display = "none";
@@ -154,7 +155,8 @@ function fn_hide(){
     }
 }
 function ln_hide(){
-    if (last.value.length >= 5){
+    if (last.value.length >= 1){
+        last.value.trim();
         last.style.border = "1px solid silver";
         last_error.style.display = "none";
         l_error.style.display = "none";
